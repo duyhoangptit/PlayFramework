@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <div *ngIf="hero">
+        <form>
+            <label>Username: </label>
+            <input [(ngModel)]="user.username"
+                   placeholder="username"
+                   type = "text"
+                   required
+                   minlength="8"
+                   maxlength="50"><br>
+            <label>Password: </label>
+            <input [(ngModel)]="user.password"
+                   placeholder="password"
+                   type="password"
+                   required
+                   minlength="8"
+                   maxlength="50"
+            ><br>
+
+            <button (click)="register()">Register</button>
+            <button (click)="login()">Login</button>
+
+        </form>
+
+    </div>
+
+</body>
+</html>
